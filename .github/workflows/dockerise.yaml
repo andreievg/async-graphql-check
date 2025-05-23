@@ -2,7 +2,7 @@ name: Dockerise
 on:
  push:
   tags: 
-   - 'v*'
+   - '*'
 
 jobs:
 
