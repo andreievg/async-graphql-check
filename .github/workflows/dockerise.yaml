@@ -8,7 +8,6 @@ jobs:
 
   build-server:
     name: Build Server
-    needs: build-client
     runs-on: ubuntu-latest
     timeout-minutes: 60
     steps:
