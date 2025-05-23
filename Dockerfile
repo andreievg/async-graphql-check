@@ -16,7 +16,7 @@ WORKDIR /usr/src/test
 # Copy executable
 COPY target/release/async-graphql-check .
 # Copy entry
-COPY docker/entry.sh .
+COPY entry.sh .
 
 WORKDIR /usr/src/test
 
