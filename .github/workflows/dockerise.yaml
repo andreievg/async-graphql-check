@@ -25,7 +25,7 @@ jobs:
             target/
           key: ${{ runner.os }}-cargo
           restore-keys: |
-            ${{ runner.os }}-cargo-
+            ${{ runner.os }}-cargo
 
       - name: Load client artifacts
         uses: actions/download-artifact@v4
