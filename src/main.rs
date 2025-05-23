@@ -114,7 +114,7 @@ async fn main() -> std::io::Result<()> {
                     .to(graphiql_handler),
             )
     })
-    .bind("127.0.0.1:8082")?
+    .bind("127.0.0.1:8000")?
     .run()
     .await
 }
