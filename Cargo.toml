@@ -5,9 +5,12 @@ edition = "2021"
 
 [dependencies]
 actix-web = "4"
-async-graphql = { version = "7.0.16", features = ["dataloader"] }
+async-graphql = {git = "https://github.com/andreievg/async-graphql.git", rev = "6c476d50f0f2132860445b5ed5b3c6dd6e8cec92", version = "7.0.16", features = ["dataloader", "chrono"] }
+async-graphql-actix-web = {package = "async-graphql-actix-web", git = "https://github.com/andreievg/async-graphql.git",  version = "7.0.16", rev = "6c476d50f0f2132860445b5ed5b3c6dd6e8cec92" }
+
+
 tokio = { version = "1", features = ["macros", "rt-multi-thread"] }
 serde = { version = "1.0", features = ["derive"] }
 anyhow = "1.0.98"
 async-trait = "0.1.88"
-async-graphql-actix-web = "7.0.16"
+
