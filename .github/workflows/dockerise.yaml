@@ -23,9 +23,10 @@ jobs:
             ~/.cargo/registry/cache/
             ~/.cargo/git/db/
             target/
-          key: ${{ runner.os }}-cargo
+          key: ${{ runner.os }}-cargo-${{ hashFiles('**/Cargo.lock') }} # It's good practice to include Cargo.lock hash in the key
+          fail-on-cache-miss: false
           restore-keys: |
-            ${{ runner.os }}-cargo
+            ${{ runner.os }}-cargo-
 
       - name: Load client artifacts
         uses: actions/download-artifact@v4
