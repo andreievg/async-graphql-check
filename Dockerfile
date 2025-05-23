@@ -17,19 +17,6 @@ WORKDIR /usr/src/test
 COPY target/release/async-graphql-check .
 # Copy entry
 COPY docker/entry.sh .
-# Copy reference file
-COPY server/data data
-
-WORKDIR /usr/src/test/configuration
-# Copy config
-COPY server/configuration/base.yaml .
-COPY docker/local.yaml .
-
-# This is where machine_uid carate gets machine_uuid
-RUN echo "test-uuid" > /etc/machine-id
-
-# Create database dir
-WORKDIR /database
 
 WORKDIR /usr/src/test
 
