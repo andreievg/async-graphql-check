@@ -27,12 +27,6 @@ jobs:
           fail-on-cache-miss: false
           restore-keys: |
             ${{ runner.os }}-cargo-
-
-      - name: Load client artifacts
-        uses: actions/download-artifact@v4
-        with:
-          name: client-dist
-          path: client/packages/host/dist
           
       - name: Build server
         run: docker run --rm --user "$(id -u)":"$(id -g)" -v "$PWD":/usr/src/omsupply -w /usr/src/omsupply rust:latest cargo build --release
