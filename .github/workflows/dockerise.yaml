@@ -35,8 +35,7 @@ jobs:
           path: client/packages/host/dist
           
       - name: Build server
-        run: docker run --rm --user "$(id -u)":"$(id -g)" -v "$PWD":/usr/src/omsupply -w /usr/src/omsupply/server rust:latest cargo build --release --bin remote_server --bin remote_server_cli
-
+        run: docker run --rm --user "$(id -u)":"$(id -g)" -v "$PWD":/usr/src/omsupply -w /usr/src/omsupply rust:latest cargo build --release
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v3
       
